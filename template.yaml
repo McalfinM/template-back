@@ -1,0 +1,14 @@
+apiVersion: scaffolder.backstage.io/v1beta2
+kind: Template
+metadata:
+  name: ts-template
+  description: My custom template ts for Backstage
+spec:
+  steps:
+    - id: my-typescript
+      name: My typescript
+      action: fetch:github
+      input:
+        url: ./src
+        values:
+          name: ${{ parameters.name }}
